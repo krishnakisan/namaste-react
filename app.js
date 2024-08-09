@@ -1,27 +1,16 @@
-// const header = React.createElement("h1",{className : "heading", id : "abc"}, "Hello React");
-// console.log(header);
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(header);
+import React from "react";
+import  ReactDOM  from "react-dom/client";
 
-// Create Nested elements
-/*
-<div id = "parent">
-    <div id = "child">
-        <h1>Hello React</h1>
-        <h2>Hello React1</h1>
-    </div>
-</div>
-*/
-const parent = 
-React.createElement("div", {id : "parent"},
-React.createElement("div", {id : "child"},
-[
-    React.createElement("h1", {}, "Hello React"),
-    React.createElement("h2", {}, "Hello React1"),
-]
-
-)
-);
+//Create Element Using React
+const header = React.createElement("h1",{className : "heading1"},"Hello World Using React !!!");
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(header);
+
+// Create Element Using JSX
+const jsxHeader = <h1 className="heading2">Hello World Using JSX</h1>;
+const root1 = ReactDOM.createRoot(document.getElementById("root1"));
+root1.render(jsxHeader);
+
+
+
 
